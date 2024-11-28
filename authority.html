@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-SYSTEM</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <style>
+      * {
+        margin:0;
+        padding:0;
+        }</style>
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"/> -->
+</head>
+<body>
+      <h1 style="font-family: Acme, sans-serif;">
+      <body>
+      <div style = "position:relative; left:970px; top:30px;" "width: 357;
+         height: 50;
+         font-size: 50pt;">
+        <p style = "color: #990066;""word-spacing:5px;""text-shadow:4px 4px 8px blue;"></></p><p style = "direction:rtl;"></p>
+        G-SYSTEM
+        </div>
+        </body></h1><br><br>
+         <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;" style="color:#FF0000;">AUTHORITY LOGIN</h2>
+       <div class="login">
+        <form id="login" method="get" action="login.php">
+            <label><b>Station Id
+            </b>
+            </label>
+            <input type="text" name="stationID" id="Phname" placeholder="Enter your stationID">
+            <br><br>
+            <label><b>Password
+            </b>
+            </label>
+            <input type="Password" name="Pass" id="Pass" placeholder="Password">
+            <br><br><br>
+            <a class="logg" href="https://garbage-management-b02af.firebaseio.com/" input type="button" name="logg" id="logg" value="logg">Login</a>
+            <br><br>
+            <input type="checkbox" name="check" id="check">
+            <span>Remember me</span>
+            <br><br>
+            <br>
+           <button class="button">Forget Password</button>
+           <form action="action_page.php" style="border:1px solid #ccc">
+                <div class="container">
+                <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;" style="color:#FF0000;">SIGN UP</h3><br>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;" style="color: black;">New Managing Authority</p>
+                <hr>
+
+                <label for="name"><b>Name</b></label><br>
+                <input type="text" placeholder="Enter Name" id="Phname" name="name" required><br>
+                <br><br>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="Phname"name="psw" required><br>
+                <br><br>
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" id="Phname" name="psw-repeat" required><br>
+                <br><br>
+                <label for="Station Address"><b>Station Address</b></label>
+                <input type="stationaddress" placeholder="Station Address" id="Phname" name="stationaddress" required><br>
+                <br><br>
+                <label for="Station Id"><b>Station ID</b></label>
+                <input type="station id" placeholder="Station ID" id="Phname" name="stationID" required><br>
+                <br><br>
+                <label for="phoneNumber"><b>Phone number</b></label>
+                <input type="PhoneNumber" placeholder="Enter phoneNumber" id="Phname" name="number" required><br>
+                <br><br>
+                 <input type="button" name="log" id="log" value="Signup"><br><br>
+                 <input type="button" name="log" id="can" value="Cancel">
+            </form> </div>
+</form>
+</form>
+<script>
+    var stationID = document.getElementById("stnid");
+    var passWord = document.getElementById("Pass");
+    var loginBtn = document.getElementById("log");
+
+
+    loginBtn.addEventListener("click", function(){
+    var stationID = stationid.value;
+    var pw = password.value;
+    if(stationID==="stationI" && pw==="088")
+    {
+
+        window.location="https://garbage-management-b02af.firebaseio.com/";
+    }
+    else if(stationID==="stationD" && pw==="077")
+    {
+        window.location="https://garbage-management-b02af.firebaseio.com/";
+    }
+    else if(stationID==="stationK" && pw==="091")
+    {
+        window.location="https://garbage-management-b02af.firebaseio.com/";
+    }
+    else{
+        alert("Incorrect username or Incorrect password");
+    }
+      });
+
+    var Name = document.getElementById("name");
+    var Password = document.getElementById("pws");
+    var Repeatpassword = document.getElementById("rpws");
+    var Stationaddress = document.getElementById("stadd");
+    var StationID = document.getElementById("stid")
+    var PhoneNumber= document.getElementById("Phnumber");
+    var signupBtn = document.getElementById("signup");
+
+    signupBtn.addEventListener("click", function()
+        {
+    var Name = name.value;
+    var pws = passWord.value;
+    var repeatpw = repeatpassword.value;
+    var stationaddress = stationaddress.value
+    var stationid = stationid.value
+    var Ph = phoneNumber.value;
+    if(Name===" " || pw===" " || repeatpw===" " || stationAddress===" " || stationid===" " || ph===" ")
+    {
+        alert("Insufficient Details");
+    }
+    else
+    {
+         window.location="https://garbage-management-b02af.firebaseio.com/";
+    }
+      });
+
+
+    </script>
+<script type="text/javascript">
+    document.getElementById("log").onclick = function () {
+        alert("Registration successful")
+        location.href = "https://garbage-management-b02af.firebaseio.com/";
+
+    };</script>
+</body>
+</html>
+
+<style>
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+    background-image: url("https://images.template.net/wp-content/uploads/2016/04/25103502/HD-Featured-Image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    float:left;
+
+}
+.login{
+        width: 382px;
+        overflow: hidden;
+        margin-left: 800px;
+        margin: 60 30 0 450px;
+        padding: 80px;
+        background-color:transparent;
+        border-radius: 15px ;
+
+}
+.button {
+  background-color: #008CBA;
+  border: 2px solid #008CBA;
+  color: white;
+  padding-left: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 6px 4px;
+  cursor: pointer;
+}
+
+h2{
+    margin-left:72%;
+    color:black;
+    padding-top:-10px;
+}
+label{
+    color:black;
+    font-size: 17px;
+}
+#Phname{
+    width: 300px;
+    height: 30px;
+    border-color: black;
+    border-radius: 7px;
+    padding-left: 8px;
+    background-color: rgb(230, 229, 227);
+}
+#Pass{
+    width: 300px;
+    height: 30px;
+    border-color: black;
+    border-radius: 7px;
+    padding-left: 8px;
+    background-color:rgb(223, 221, 219);
+
+}
+#can
+{
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+    border-color:black;
+    border-radius: 17px;
+    padding-left: 7px;
+    color:black;
+    background-color: #ec8a5c;
+
+
+}
+
+#log{
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+    border-color:black;
+    border-radius: 17px;
+    padding-left: 7px;
+    color:black;
+    background-color: #ec8a5c;
+
+
+}
+#logg{
+    text-align: center;
+    font-family: Acme, sans-serif;
+    font-size:20px;
+    width:150px;
+    height:30px;
+    border-color: white;
+    border-radius: 17px;
+    padding-left: 7px;
+    color:black;
+    background-color: #ec8a5c;
+    }
+span{
+    color: rgb(14, 13, 13);
+    font-size: 17px;
+
+}
+a{
+    float: right;
+    background-color: rgb(241, 248, 138);
+}
+#check{
+    float: left;
+}
+</style>

@@ -1,0 +1,173 @@
+<html>
+    <head>
+    </head>
+    <body>
+       <marquee> <p style="background-color: white;">ASSISTANCE REQUESTING PAGE </p></marquee>
+        <br><br><br><br>
+        <center>
+    <input id="namebox" type="text" placeholder="Enter your NAME"></input> <br><br><br>
+         <input id="phonebox" type="text"placeholder="Enter your Phonenumber"></input> <br><br><br>
+        <input id="areabox" type="text"placeholder="Enter your Address"></input> <br><br><br>
+
+
+        <input type="date" id="Date" name="Date"placeholder="Date"><br><br>
+
+        <input type="time" id="time" name="time"placeholder="time">
+        <br><br><br>
+        <button id='insert'>ADD</button>
+        <button id='sub'>SUBMIT</button>
+         </center>
+
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+
+        <script id="MainScript">
+            var firebaseConfig = {
+              apiKey: "AIzaSyAAP38kB_yGDKBazSZguBooYQB5lKKId1E",
+              authDomain: "garbage-management-b02af.firebaseapp.com",
+              databaseURL: "https://garbage-management-b02af.firebaseio.com",
+              projectId: "garbage-management-b02af",
+              storageBucket: "garbage-management-b02af.appspot.com",
+              messagingSenderId: "10045585021",
+              appId: "1:10045585021:web:417ad00c0a9cdbc7f86314"
+            };
+            firebase.initializeApp(firebaseConfig);
+//-------------------Ready Data--------------------------------------//
+var nameV, phoneV, areaV,timeV,dateV;
+
+function Ready(){
+    nameV = document.getElementById('namebox').value;
+    phoneV = document.getElementById('phonebox').value;
+    areaV = document.getElementById('areabox').value;
+    timeV = document.getElementById('time').value;
+    dateV= document.getElementById('Date').value;
+
+}
+//---------------------Insert Process-------------------------------------//
+    document.getElementById('insert').onclick = function(){
+        alert("Request sent");
+        Ready();
+        firebase.database().ref('public/'+phoneV).set({
+            Name: nameV,
+            PhoneNumber: phoneV,
+            Area: areaV,
+            Time:timeV,
+            Date:dateV,
+        });
+    }
+
+//--------------------Deletion Process----------------------------------------------//
+    document.getElementById('delete').onclick = function(){
+        Ready();
+        firebase.database().ref('public/'+phoneV).remove();
+        }
+        </script>
+        <script type="text/javascript">
+            document.getElementById("sub").onclick = function () {
+
+                location.href = "thankyou.html";
+
+            };</script>
+    </body>
+</html>
+
+<style>
+   #namebox {
+    width: 300px;
+    height: 50px;
+    border-color: black;
+    border-radius: 7px;
+    padding-left: 8px;
+    background-color: rgb(230, 229, 227);
+}
+#phonebox{
+
+    width: 300px;
+    height: 50px;
+    border-color: black;
+    border-radius: 7px;
+    padding-left: 8px;
+    background-color: rgb(230, 229, 227);
+}
+#areabox{
+
+    width: 300px;
+    height: 50px;
+    border-color: black;
+    border-radius: 7px;
+    padding-left: 8px;
+    background-color: rgb(230, 229, 227);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+    background-image: url("https://images.wsj.net/im-148147?width=1260&size=1.5");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#Date{
+    width: 300px;
+    height: 50px;
+    border-color: black;
+    border-radius: 7px;
+    padding-left: 8px;
+    background-color: rgb(230, 229, 227);
+}
+label{
+    font-size: larger;
+
+}
+#time
+{
+    width: 300px;
+    height: 50px;
+    border-color: black;
+    border-radius: 7px;
+    padding-left: 8px;
+    background-color: rgb(230, 229, 227);
+}
+#insert{
+
+    width: 100px;
+    height: 50px;
+    border-color: black;
+    border-radius: 7px;
+    padding-left: 8px;
+    background-color: rgb(233, 252, 65);
+}
+#sub{
+
+    width: 100px;
+    height: 50px;
+    border-color: black;
+    border-radius: 7px;
+    padding-left: 8px;
+    background-color: rgb(233, 252, 65);
+}
+#delete{
+
+    width: 100px;
+    height: 50px;
+    border-color: black;
+    border-radius: 7px;
+    padding-left: 8px;
+    background-color: rgb(95, 243, 120);
+}
+p{
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-size: 35px;
+}
+#body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+    background-image: url("https://images.wsj.net/im-148147?width=1260&size=1.5");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+</style>
